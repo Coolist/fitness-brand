@@ -1,0 +1,45 @@
+body {
+  font-family: 'museo-sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+}
+
+.section {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+  min-height: 100vh;
+  padding: 5rem 16vw;
+  overflow: hidden;
+
+  h1 {
+    color: #F8F6F3;
+    font-size: 92px;
+  }
+}
+
+.section-one {
+  background-color: #17BEBE;
+}
+
+.section-two {
+  background-color: #FFB41F;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.section-three {
+  background-color: #2B5BC9;
+}
+
+.section-four {
+  background-color: #FF841F;
+  text-align: right;
+  justify-content: flex-end;
+}

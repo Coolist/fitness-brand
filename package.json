@@ -1,0 +1,25 @@
+{
+  "name": "Fitness",
+  "version": "1.0.0",
+  "description": "Fitness brand development.",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "coffee index.coffee serve"
+  },
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "cli-color": "^1.0.0",
+    "css-mqpacker": "^3.1.0",
+    "del": "^1.2.0",
+    "metalsmith": "^1.7.0",
+    "metalsmith-define": "^1.0.0",
+    "metalsmith-postcss": "^2.0.0",
+    "metalsmith-sass": "^1.2.1",
+    "metalsmith-serve": "0.0.3",
+    "metalsmith-templates": "^0.7.0",
+    "metalsmith-watch": "^1.0.1",
+    "node-fs-extra": "^0.8.1",
+    "swig": "^1.4.2"
+  }
+}

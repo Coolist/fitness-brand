@@ -1,0 +1,25 @@
+.page-home {
+
+  .section-photo {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: auto;
+
+    @include breakpoint(small) {
+      padding: 0;
+    }
+
+    + .section-photo {
+      padding-top: 80px;
+
+      @include breakpoint(small) {
+        padding-top: 40px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

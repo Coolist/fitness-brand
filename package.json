@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "coffee index.coffee serve",
-    "build": "coffee index.coffee build"
+    "build": "coffee index.coffee build",
+    "deploy": "aws s3 sync build/ s3://joshconley.com/ --acl public-read --delete --size-only --cache-control no-transform,public,max-age=604800"
   },
   "dependencies": {
     "autoprefixer": "^5.2.0",

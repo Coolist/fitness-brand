@@ -18,7 +18,7 @@ swig.setDefaults
   cache: false
 
 # Welcome text
-console.log cc.blue '------------- Fitness Brand Experiments -------------\n'
+console.log cc.blue '------------- JoshConley.com -------------\n'
 
 # Switch depending on task
 switch process.argv[2]
@@ -31,7 +31,7 @@ switch process.argv[2]
     # Start Metalsmith
     metalsmith __dirname
       .use sass
-        outputStyle: 'compact'
+        outputStyle: 'compressed'
       .use postcss [
         require 'autoprefixer'
         require 'css-mqpacker'
@@ -39,6 +39,8 @@ switch process.argv[2]
       .use define
         config:
           environment: 'production'
+          assetUrl: 'http://cdn.joshconley.com'
+          now: new Date()
       .use templates
         engine: 'swig'
         inPlace: true
@@ -50,10 +52,10 @@ switch process.argv[2]
           ###
           console.log cc.blue 'Copying fonts...'
           fs.copySync '../src/fonts', './build/assets/fonts'
+          ###
 
           console.log cc.blue 'Copying images...'
           fs.copySync './images', './build/assets/images'
-          ###
 
           console.log cc.green '\nDone build.  No errors.'
 
@@ -71,6 +73,8 @@ switch process.argv[2]
       .use define
         config:
           environment: 'testing'
+          assetUrl: 'assets'
+          now: new Date()
       .use templates
         engine: 'swig'
         inPlace: true
@@ -90,9 +94,9 @@ switch process.argv[2]
           ###
           console.log cc.blue 'Copying fonts...'
           fs.copySync '../src/fonts', './build/assets/fonts'
+          ###
 
           console.log cc.blue 'Copying images...'
           fs.copySync './images', './build/assets/images'
-          ###
 
           console.log cc.green '\nDone build.  No errors.\nCTRL + C to exit.'
